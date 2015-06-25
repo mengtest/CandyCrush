@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CandyCrush</title>
+
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="Candy_Crush.ico">
+    <!-- 见图标添加到屏幕桌面 -->
+    <link rel="apple-touch-icon" href="Candy_Crush.ico">
+    <!-- 设置启动画面(默认显示首页截图) -->
+    <link rel="apple-touch-startup-image" href="assest/images/apple-touch-startup-image-640x1136.jpeg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+    <link rel="apple-touch-startup-image" href="assest/images/apple-touch-startup-image-640x920.jpeg"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+    <!-- 删除默认的苹果工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 屏幕顶部条颜色 默认 white 值可为：black | black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- 设置桌面图标的标题(限制在六个中文字符长度，超出会被隐藏) -->
+    <meta name="apple-mobile-web-app-title" content="2048">
+    <!-- 添加只能APP广告 -->
+    <!--<meta name="apple-itunes-app" content="app-id=myappstroeid,affiliate-data=myaffilidata,app-argument=myurl">-->
+    <!-- 禁止缓存，无法脱机使用 -->
+    <!--<meta http-equiv="Pragma" content="no-cache">-->
+    <!-- 针对不识别viewport标签的手持设备优化 -->
+    <meta name="HandheldFriendly" content="True">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+ <div class="container">
+     <div class="head">
+         <h1 class="title">CandyCrush</h1>
+         <div class="tip-container">
+             <div class="score-container">0</div>
+             <div class="targetScore-container">0</div>
+             <div class="moves-container">0</div>
+         </div>
+     </div>
+     <div class="game-message">
+         <div class="middle-warp"></div>
+         <div class="lower-warp">
+             <a class="keep-playing-button">Next Level</a>
+             <a class="retry-button">Try again</a>
+         </div>
+     </div>
+     <div class="game-container">
+         <div class="grid-container">
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+             <div class="grid-row">
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+                 <div class="grid-cell"></div>
+             </div>
+         </div>
+         <div class="tile-container"></div>
+     </div>
+ </div>
+ <script src="js/function_polyfill.js"></script>
+ <script src="js/animframe_polyfill.js"></script>
+ <script src="js/classlist_polyfill.js"></script>
+ <script src="js/utils.js"></script>
+ <script src="js/log.js"></script>
+ <script src="js/event_manager.js"></script>
+ <script src="js/ajax.js"></script>
+ <script src="js/storage_manager.js"></script>
+ <script src="js/candy_manager.js"></script>
+ <script src="js/level_manager.js"></script>
+ <script src="js/tile.js"></script>
+ <script src="js/grid.js"></script>
+ <script src="js/html_actuator.js"></script>
+ <script src="js/game_controller.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>
